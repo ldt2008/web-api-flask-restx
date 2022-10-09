@@ -58,17 +58,29 @@ $ flask db migrate -m "Initial migration."
 $ flask db upgrade
 ```
 ## Run app
+Run flask web api
 ```
-flask run
+env FLASK_APP=manage.py FLASK_ENV='development' python -m flask run
+
+```
+Run unit test
 ```
 
+```
 ## Run debug
 .vscode > launch.json
 ```json
 {
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "name": "Python: unit test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/test.py",
+            "args": [
+            ],
+        },
         {
             "name": "Python: Flask",
             "type": "python",
@@ -78,7 +90,24 @@ flask run
                 "FLASK_APP": "manage.py",
                 "FLASK_ENV": "development",
                 "FLASK_DEBUG": "1",
-                "SECRET_KEY": "secret_key"
+                // "SECRET_KEY": "78e6db55ff39bfca7c0a47afc6651349411dd1260d32cfe0ddb95445391a5db1"
+            },
+            "args": [
+                "run",
+                // "--no-debugger",
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Python: Flask Testing",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "test.py",
+                "FLASK_ENV": "testing",
+                "FLASK_DEBUG": "1",
+                // "SECRET_KEY": "78e6db55ff39bfca7c0a47afc6651349411dd1260d32cfe0ddb95445391a5db1"
             },
             "args": [
                 "run",
