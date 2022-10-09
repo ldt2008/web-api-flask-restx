@@ -65,7 +65,7 @@ env FLASK_APP=manage.py FLASK_ENV='development' python -m flask run
 ```
 Run unit test
 ```
-
+python test.py
 ```
 ## Run debug
 .vscode > launch.json
