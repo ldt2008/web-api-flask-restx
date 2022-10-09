@@ -1,17 +1,17 @@
 # virtual environment
-## Install virtualenv
+Install virtualenv
 ```
 pip install virtualenv
 ```
-## Create virtual environment
+Create virtual environment
 ```
 virtualenv venv
 ```
-## Activate virtual environment
+Activate virtual environment
 ```
 activate: source .env/bin/activate
 ```
-## Deactivate virtual environment
+Deactivate virtual environment
 ```
 deactivate: deactivate
 ```
